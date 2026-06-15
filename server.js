@@ -17,7 +17,7 @@ app.get('/explain', async (req, res) => {
     try {
         // Enforce the simplified context via system instruction
         const response = await ai.models.generateContent({
-            model: 'gemini-flash-latest',
+            model: 'gemini-2.5-flash-lite',
             contents: `Explain this word or phrase: "${word}"`,
             config: {
                 systemInstruction: "You are a built-in reading assistant. Explain the user's word or phrase in simple, clear, and concise terms. Max 3 sentences. Give 2 relatable examples of using it in a sentence.",
